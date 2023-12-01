@@ -5,9 +5,14 @@ def run(playwright: Playwright) -> None:
     browser = playwright.chromium.launch(headless=False)
     context = browser.new_context()
     page = context.new_page()
+
+    # informações do prestador
     cnpj_emissor = ""
     senha_emissor = ''
     data_emissao = '28/11/2023'
+
+
+    # informações do prestador
 
     cnpj_cliente= ''
     telefone_cliente = ""
@@ -16,6 +21,8 @@ def run(playwright: Playwright) -> None:
     servico_search = '01.'
     cnae_servico ="01.01.01 - Análise e"
     descrica_servico = "Serviço de Desenvolvimento de Aplicativo para controle de áudio."
+   
+   
     page.goto("https://www.nfse.gov.br/EmissorNacional/Login")
     page.get_by_placeholder("CPF/CNPJ").click()
     page.get_by_placeholder("CPF/CNPJ").fill(cnpj_emissor)
