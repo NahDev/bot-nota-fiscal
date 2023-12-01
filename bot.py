@@ -5,13 +5,13 @@ def run(playwright: Playwright) -> None:
     browser = playwright.chromium.launch(headless=False)
     context = browser.new_context()
     page = context.new_page()
-    cnpj_emissor = "35.686.321/0001-76"
+    cnpj_emissor = ""
     senha_emissor = ''
     data_emissao = '28/11/2023'
 
-    cnpj_cliente= '395.820.738/37'
-    telefone_cliente = "(11)9874-56334"
-    email_cliente ="nahuan89@gmail.com"
+    cnpj_cliente= ''
+    telefone_cliente = ""
+    email_cliente =""
     valor = "100"
     servico_search = '01.'
     cnae_servico ="01.01.01 - Análise e"
