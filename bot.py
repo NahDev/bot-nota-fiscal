@@ -57,10 +57,12 @@ def run(playwright: Playwright, cnpj_emissor, senha_emissor, data_emissao, cnpj_
 
 # Lê as informações do arquivo CSV
 with open('seuarquivo.csv', 'r', newline='') as csvfile:
-    reader = csv.reader(csvfile)
-    header = next(reader)  # Ignora o cabeçalho
+    reader = csv.DictReader(csvfile)
     data = list(reader)
 
 with sync_playwright() as playwright:
     for row in data:
-        run(playwright, *row)
+        # Convertendo a coluna 'valor' para um número
+        row['valor'] = float(row['valor'].replace(',', '.'))
+
+        run(playwright, **row)

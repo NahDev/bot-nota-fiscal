@@ -1,0 +1,2 @@
+cnpj_emissor,senha_emissor,data_emissao,cnpj_cliente,telefone_cliente,email_cliente,valor,servico_search,cnae_servico,descrica_servico
+11111111111111,123456,28/11/2023,22222222222222,987654321,teste@email.com,"100",01.,01.01.01 - Análise e,Serviço de Desenvolvimento de Aplicativo para controle de áudio.
